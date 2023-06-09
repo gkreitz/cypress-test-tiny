@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
-describe('page', () => {
+describe('page', {baseUrl: 'https://github.com/'}, () => {
   it('works', () => {
-    cy.visit('https://example.cypress.io')
+      cy.visit('/gkreitz/cypress-test-tiny')
+      cy.get('a[href="http://google.com/"]').click()
   })
 })
